@@ -1,0 +1,8 @@
+# Cegah eksekusi file PHP di folder ini
+<FilesMatch "\.php$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+Options -ExecCGI
+AddHandler cgi-script .php .pl .py .jsp .asp .sh .cgi
